@@ -63,3 +63,7 @@ write.csv(Madagascar, "Wildlife Trade/2022/Output/JW/Madagascar_Amph.csv")
 write.csv(Malaysia, "Wildlife Trade/2022/Output/JW/Malaysia_Amph.csv")
 write.csv(Indonesia, "Wildlife Trade/2022/Output/JW/Indonesia_Amph.csv")
 write.csv(Philippines, "Wildlife Trade/2022/Output/JW/Philippines_Amph.csv")
+
+## MTM
+
+# use Alice country level data with species and country resolution
