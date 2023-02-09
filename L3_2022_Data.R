@@ -63,3 +63,30 @@ write.csv(Madagascar, "Wildlife Trade/2022/Output/JW/Madagascar_Amph.csv")
 write.csv(Malaysia, "Wildlife Trade/2022/Output/JW/Malaysia_Amph.csv")
 write.csv(Indonesia, "Wildlife Trade/2022/Output/JW/Indonesia_Amph.csv")
 write.csv(Philippines, "Wildlife Trade/2022/Output/JW/Philippines_Amph.csv")
+
+## MTM
+
+# use Alice country level data with species and country resolution
+
+## RMW
+
+unique(trade$UT_type)
+
+Purpose_data <- trade %>% 
+  mutate(Food = ifelse(grepl("Food", UT_type), 1, 0),
+         Pet_or_Display = ifelse(grepl("Pets/display animals", UT_type), 1, 0),
+         Medicine = ifelse(grepl("Medicine", UT_type), 1, 0),
+         Sport_Hunting = ifelse(grepl("Sport hunting/specimen collecting", UT_type), 1, 0),
+         Horticulture = ifelse(grepl("Horticulture", UT_type), 1, 0),
+         Unknown = ifelse(grepl("Unknown", UT_type), 1, 0),
+         Research = ifelse(grepl("Research", UT_type), 1, 0),
+         Manufacturing_chemicals = ifelse(grepl("Manufacturing chemicals|Other chemicals", UT_type), 1, 0),
+         Jewelry_Accessories_Apparel = ifelse(grepl("Wearing apparel|accessories|jewellery", UT_type), 1, 0),
+         Handicrafts = ifelse(grepl("Handicrafts", UT_type), 1, 0),
+         Other = ifelse(grepl("Other household goods|Other", UT_type), 1, 0),
+         Poisons = ifelse(grepl("Poisons", UT_type), 1, 0),
+         Fuels = ifelse(grepl("Fuels", UT_type), 1, 0),
+         Fibre = ifelse(grepl("Fibre", UT_type), 1, 0),
+         Construction = ifelse(grepl("Construction or structural materials", UT_type), 1, 0))
+
+write.csv(Purpose_data, "Wildlife Trade/2022/Output/RMW/Purpose_data.csv")
