@@ -1,7 +1,7 @@
 # L3_2022_Projects_Wildlife_Trade
 
-# JW 
-# Scheffers Data
+JW 
+Scheffers Data
 # Amphibian trade from South America, Asia, and maybe Madagascar.
 # Focus on aesthetic traits, size and colour etc.
 # Pet vs Prod.
