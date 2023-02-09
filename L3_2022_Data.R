@@ -90,3 +90,4 @@ Purpose_data <- trade %>%
          Construction = ifelse(grepl("Construction or structural materials", UT_type), 1, 0))
 
 write.csv(Purpose_data, "Wildlife Trade/2022/Output/RMW/Purpose_data.csv")
+g
